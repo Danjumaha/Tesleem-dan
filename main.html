@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tesleem Dan — Luxury Developer Portfolio</title>
+   
+  <!-- Stylesheet (use your styles.css which contains the black & gold + animations) -->
+  <link rel="stylesheet" href="styles.css">
+ 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="color-scheme" content="dark">
+  <style>
+    :root{
+      --gold: #FFD700;
+      --bg:#0D0D0D;
+      --panel:#151515;
+      --muted:#BFBFBF;
+      --text:#F5F5F5;
+    }
+
+    body { background: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; margin:0; }
+
+    .site-header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: linear-gradient(180deg, rgba(13,13,13,0.9), rgba(13,13,13,0.6));
+      border-bottom: 1px solid rgba(212,175,55,0.06);
+      backdrop-filter: blur(6px);
+    }
+    .site-header .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;}
+    .brand{color:var(--muted);text-decoration:none;font-weight:700}
+    .brand-gold{color:var(--gold);font-weight:800}
+    .nav a{color:var(--muted);margin-left:18px;text-decoration:none;padding:8px 6px;border-radius:6px;font-weight:600}
+    .nav a:hover{color:var(--gold);background:rgba(212,175,55,0.03)}
+    .nav a.active{color:var(--gold)}
+
+    .hero{padding:120px 20px 80px 20px; background:linear-gradient(180deg,#0f0f0f,#080808);overflow:hidden}
+    .hero-inner{max-width:1100px;margin:0 auto;display:flex;gap:2rem;align-items:center}
+    .hero-text{
+      flex:1;
+      color:#FFD700;
+      font-weight: 400;
+    }
+    .hero-title{font-size:2.4rem;line-height:1.05;color:var(--text);margin-bottom:12px}
+    .hero-title .gold{color: #FFD700}
+    .hero-sub{color:var(--muted);max-width:620px;margin-bottom:18px}
+
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-gold{
+      background:linear-gradient(90deg,var(--gold),rgba(212,175,55,0.92));
+      color:#0d0d0d;padding:10px 18px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-block;
+      box-shadow:0 6px 30px rgba(212,175,55,0.08);
+      transition: all 220ms ease;
+      border: 1px solid rgba(212,175,55,0.18);
+    }
+    .btn-outline{
+      border:1px solid rgba(212,175,55,0.12);color:var(--muted);padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:700;background:transparent;
+    }
+
+    .btn-gold:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 40px rgba(212,175,55,0.18), 0 0 18px rgba(212,175,55,0.08) inset;
+    }
+    .btn-outline:hover{
+      color:var(--gold);
+      border-color:rgba(212,175,55,0.28);
+      transform: translateY(-3px);
+    }
+
+    .hero-card{width:340px;background:var(--panel);border-radius:14px;padding:18px;border:1px solid rgba(212,175,55,0.04);box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+    .card-inner h3{margin:0 0 6px;color:var(--gold)}
+    .small-link{color:var(--gold);text-decoration:none;font-weight:600}
+
+    .section{padding:60px 20px}
+    .container{max-width:1100px;margin:0 auto}
+
+    .section-title{font-size:1.5rem;color:var(--gold);margin-bottom:14px}
+
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .why-card{background:var(--panel);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+    .why-card h3{color:gold;margin-bottom:8px}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .project-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;overflow:hidden;border:1px solid rgba(212,175,55,0.04);display:flex;flex-direction:column;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .project-card img{width:100%;height:180px;object-fit:cover;display:block}
+    
+     .project-body {
+  padding: 14px 18px; /* better side padding for readability */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start; /* ensures left alignment */
+  box-sizing: border-box;
+}
+    
+    
+    
+    .project-card p {
+  text-align: left;
+  line-height: 1.6;
+  margin: 8px 0;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+    
+    
+    .project-body h3{margin:0;
+    
+    color:gold;
+      
+      text-align: center;
+    }
+ 
+    
+    
+    .project-actions{display:flex;gap:10px;
+    
+     
+      text-align: center;
+      justify-content: center;
+      
+    }
+    
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    .view-btn{background:transparent;border:2px solid  gold ;padding:10px 12px;border-radius:10px;color:var(--muted);text-decoration:none;font-weight:700
+      text-align: center;
+      justify-content: center;
+    }
+    .view-btn:hover{color:var(--gold);border-color:rgba(212,175,55,0.28);transform:translateY(-3px)}
+
+    .faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .faq-item{background:var(--panel);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .faq-item h3{color:gold;font-size:1rem;margin-bottom:8px}
+
+    .site-footer{background:#050505;padding:36px 20px;border-top:1px solid rgba(212,175,55,0.04);margin-top:40px}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;gap:20px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
+    .footer-info p{color:var(--muted);margin:6px 0}
+    .footer-info a{color:var(--gold);text-decoration:none}
+    .footer-bottom{color:#9b9b9b}
+
+    @media(max-width:900px){
+      .hero-inner{flex-direction:column}
+      .project-card img{height:160px}
+    }
+
+    .new {
+      color:#FFD700;
+    }
+
+    .tips-news-section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.5rem;
+      color: gold;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .news-card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .news-card h3 {
+      font-size: 1.3rem;
+      margin: 20px;
+      color: gold;
+    }
+
+    .news-card p {
+      font-size: 1rem;
+      margin: 0 20px 20px;
+      color: #ddd;
+    }
+
+    .read-more-btn {
+      display: block;
+      margin: 0 20px 20px;
+      padding: 10px 20px;
+      background-color: gold;
+      color: #0a0a0a;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .read-more-btn:hover {
+      background-color: #e6c200;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      background-color: #1a1a1a;
+      margin: 5% auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 800px;
+      color: #f5f5f5;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 0.5s;
+    }
+
+    .modal-content img {
+      width: 100%;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 2rem;
+      color: gold;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body class="bg-dark">
+
+ <!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-gold">Tesleem</span> Dan</a>
+
+    <!-- Hamburger Button -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav" id="nav-menu">
+      <div class="close-btn" id="close-btn">&times;</div>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="#why-choose-us">Why Choose Us ?</a>
+      <a href="#projects">Projects</a>
+      <a href="#tips-news">Tips</a>
+      <a href="#faq">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="Serv.html#contact">My Offer</a>
+    </nav>
+  </div>
+</header>
+ 
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <div class="new">
+            <h1 class="hero-title float-in">I craft polished web experiences — <span class="gold">with precision</span>.</h1>
+          </div>
+          <p class="hero-sub float-in float-delay-1">Front-end & back-end developer · Arduino projects · High-end web & e-commerce experiences.</p>
+
+          <div class="hero-cta float-in float-delay-2">
+            <a class="btn-gold" href="contact.html">Hire Me</a>
+            <a class="btn-outline" href="#projects">See Projects</a>
+          </div>
+        </div>
+
+        <div class="hero-card float-in float-delay-3">
+          <div class="card-inner">
+            <h3>  Professional Offer </h3>
+            <p>
+             Explore my professional services and hand-picked courses — designed to level up your skills and bring your ideas to life!
+            </p>
+            <a class="small-link" href="Serv.html">Explore</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-choose-us" class="section">
+      <div class="container">
+        <h2 class="section-title float-in">Why Choose Me ?</h2><br>
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <h3>Professional Quality</h3>
+            <p>Industry-standard code, performance-first approach, and pixel-perfect UI.</p>
+          </div>
+          <div class="why-card reveal">
+            <h3>Strategic Thinking</h3>
+            <p>I build products with user goals and business outcomes in mind—not just pretty UIs.</p>
+          </div>
+          <div class="why-card reveal">
+            <h3>Full Support</h3>
+            <p>From deployment to maintenance — I’ll support your project end-to-end.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section dark-section">
+      <div class="container">
+        <h2 class="section-title float-in">Featured Projects</h2><br>
+
+        <div class="projects-grid">
+          <!-- Diamond Height Realty -->
+          <article class="project-card reveal">
+            <img src="dia2.jpg" alt="Diamond Height Realty Ltd">
+            <div class="project-body">
+              <h3>Diamond Height Realty Ltd</h3>
+              <p>Luxury real estate showcase with listings,  they help in building Modern house with perfect construction  Contact diamond-height-realty-ltd  to Develop your Estate  .</p>
+              <div class="project-actions">
+                <a class="view-btn" href="https://diamond-height-realty-ltd.netlify.app/" title="View Diamond Height project">View Project</a>
+ 
+              </div>
+            </div>
+          </article>
+
+          <!-- Top-Made Realty Homes -->
+          <article class="project-card reveal">
+            <img src="top.jpg" alt="Top-Made Realty Homes">
+            <div class="project-body">
+              <h3>Top-Made Realty Homes</h3>
+              <p>Property listings , Selling and buying  platform , they choose the best way for you with budget, and contact integration for you to connect with Top-Made and name your budget .</p>
+              <div class="project-actions">
+                <a class="view-btn" href="https://top-made-realty-homes.netlify.app/" title="View Top-Made project">View Project</a>
+ 
+              </div>
+            </div>
+          </article>
+
+          <!-- HMD Automobile Company -->
+          <article class="project-card reveal">
+            <img src="hmd.jpg" alt="HMD Automobile Company">
+            <div class="project-body">
+              <h3>HMD Automobile Company</h3>
+              <p>Automobile brand site with model galleries, maintenance tips, and instant WhatsApp support for American Cars repairal issues.</p>
+              <div class="project-actions">
+                <a class="view-btn" href="https://hmd-automobile-company.netlify.app/" title="View HMD project">View Project</a>
+ 
+              </div>
+            </div>
+          </article>
+
+          <!-- Ashake Skin Care -->
+          <article class="project-card reveal">
+            <img src="ask.jpg" alt="Ashake Skin Care">
+            <div class="project-body">
+              <h3>Ashake Skin Care</h3>
+              <p>Full eCommerce site for organic skincare with product filters and Paystack checkout flow, they recommend good product for all skin type ,   Store  unlunch yet Connect with them via WhatsApp .</p>
+              <div class="project-actions">
+                <a class="view-btn" href="#projects" title="View Ashake project"> unlunch Project</a>
+ 
+              </div>
+            </div>
+          </article>
+
+          <!-- Pocket Hizab -->
+          <article class="project-card reveal">
+            <img src="kub.jpg" alt="Utility Project">
+            <div class="project-body">
+              <h3>Pocket Hizab</h3>
+              <p>Developed an innovative automatic calculator called Pocket Hizab, designed to uncover hidden aspects of human life through advanced hizab astrology calculations. Built with a focus on accuracy, accessibility, and ease of use for professional hizab astrologers. Project unlunch you can reach them out via WhatsApp to have the Full Access About the Calculator.</p>
+              <div class="project-actions">
+                <a class="view-btn" href="#projects" title="View CMS project">unlunch project</a>
+                
+              </div>
+            </div>
+          </article>
+
+          <!-- Learn Hizab -->
+          <article class="project-card reveal">
+            <img src="lea.jpg" alt="Utility Project">
+            <div class="project-body">
+              <h3>Learn Hizab</h3>
+              <p>Created an online learning platform called Learn Hizab to educate the next generation (Gen Z) about the principles and practice of Hizab. Designed structured, step-by-step classes with integrated video lessons and interactive web tools to make learning accessible, engaging, and practical. Project unlunch you can reach them out via WhatsApp to know about the Class.</p>
+              <div class="project-actions">
+                <a class="view-btn" href="#projects" title="View CMS project">unlunch project</a>
+ 
+              </div>
+            </div>
+          </article>
+
+          <!-- Alinn Farm -->
+          <article class="project-card reveal">
+            <img src="ali.jpg" alt="Utility Project">
+            <div class="project-body">
+              <h3>Alinn Farm</h3>
+              <p>Built Alinn Farm, an online livestock marketplace that allows customers across Africa to buy and receive animals quickly and securely. The platform supports payments in Naira and cryptocurrency, ensuring convenience and accessibility. Designed to simplify livestock trading with fast delivery, trusted service, and modern e-commerce features. Project unlunch you can reach them out via WhatsApp to know about the farm.</p>
+              <div class="project-actions">
+                <a class="view-btn" href="#projects" title="View CMS project">unlunch project</a>
+ 
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPS & NEWS -->
+    <section id="tips-news" class="tips-news-section">
+      <h2 class="section-title">Tips & News</h2>
+      <div class="news-grid">
+        <!-- ARTICLE 1 -->
+        <article class="news-card" data-title="Top 5 CSS Tricks Every Developer Should Know" 
+                 data-image="web2.jpg" 
+                 data-text="CSS is powerful! Learn how to make your websites look professional using these essential tricks. From flexbox magic to grid layouts, animations, and advanced selectors, you can transform your web projects from plain to extraordinary. Imagine vibrant layouts, smooth transitions, and a UI that captivates users. Every tip here is a gem for serious developers.">
+          <img src="web2.jpg" alt="Web Development">
+          <h3>Top 5 CSS Tricks Every Developer Should Know</h3>
+          <p class="news-text">CSS is powerful! Learn some essential tricks for professional websites.</p>
+          <button class="read-more-btn">Read More</button>
+        </article>
+
+        <!-- ARTICLE 2 -->
+        <article class="news-card" data-title="Understanding Modern Computer Architecture" 
+                 data-image="web1.jpg" 
+                 data-text="Dive into CPU, memory, and storage to understand how computers handle tasks efficiently. Learn about pipelines, caches, cores, and threads in a way that makes complex concepts digestible. This article will blow your mind with the hidden power inside every computer. Perfect for both beginners and advanced learners aiming to master computer architecture.">
+          <img src="web1.jpg" alt="Computer Engineering">
+          <h3>Understanding Modern Computer Architecture</h3>
+          <p class="news-text">Explore CPU, memory, and storage concepts clearly and efficiently.</p>
+          <button class="read-more-btn">Read More</button>
+        </article>
+
+        <!-- ARTICLE 3 -->
+        <article class="news-card" data-title="JavaScript Tips for Efficient Coding" 
+                 data-image="web3.jpg" 
+                 data-text="Write cleaner, faster JavaScript code with practical tips. Learn closures, async/await, ES6 features, and debugging strategies that make coding smoother and more fun. These tips will elevate your web development skills, making your projects efficient and professional.">
+          <img src="web3.jpg" alt="JavaScript Tips">
+          <h3>JavaScript Tips for Efficient Coding</h3>
+          <p class="news-text">Improve your JS skills with these practical, powerful tips.</p>
+          <button class="read-more-btn">Read More</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="news-modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="close-btn" aria-label="Close">&times;</button>
+        <h3 id="modal-title"></h3>
+        <img id="modal-image" src="" alt="News Image">
+        <p id="modal-text"></p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section id="faq" class="section dark-section">
+      <div class="container">
+        <h2 class="section-title float-in">Frequently Asked Questions</h2><br>
+        <div class="faq-grid">
+          <div class="faq-item reveal">
+            <h3>What services do you offer?</h3>
+            <p>Web development (front & back), eCommerce, Arduino/embedded projects, and consulting.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>How long does a typical project take?</h3>
+            <p>Small sites: 1–2 weeks. Medium: 2–6 weeks. Larger platforms depend on scope — let's discuss.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>Do you provide post-launch support?</h3>
+            <p>Yes — I offer maintenance and feature updates with clear SLAs and affordable packages.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>How can I pay?</h3>
+            <p>I support Paystack, card payments, and crypto options on request (USDT/PEPE20 if needed).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-info">
+        <h3><span class="brand-gold">Tesleem</span> Dan </h3>
+        <p>Building world-class web experiences from Nigeria.</p>
+        <p><strong>Address:</strong> 2 Apele High Court Road, Sagamu, Ogun State, Nigeria</p>
+        <p><strong>Phone:</strong> <a href="tel:+2348036909700" style="color:var(--gold)">08036909700</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348036909700" target="_blank" style="color:var(--gold)">Chat Now</a></p>
+        <p><strong>Email:</strong> <a href="mailto:tesleemrazaq@gmail.com" style="color:var(--gold)">tesleemrazaq@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© <span id="year"></span> Tesleem Dan — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* Year */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* Reveal on scroll animations */
+    function revealOnScroll(){
+      const reveals = document.querySelectorAll('.reveal, .float-in');
+      for(let el of reveals){
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+          el.classList.add('active');
+          el.style.opacity = 1;
+          el.style.transform = 'translateY(0)';
+        }
+      }
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.reveal').forEach(el=>{
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(50px)';
+        el.style.transition = 'all 0.9s cubic-bezier(.2,.9,.2,1)';
+      });
+      document.querySelectorAll('.float-in').forEach(el=>{
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(12px)';
+        el.style.transition = 'all 0.8s cubic-bezier(.2,.9,.2,1)';
+      });
+      revealOnScroll();
+    });
+    window.addEventListener('scroll', revealOnScroll);
+
+    /* News modal logic */
+    (function(){
+      const modal = document.getElementById('news-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalImage = document.getElementById('modal-image');
+      const modalText = document.getElementById('modal-text');
+      const closeBtn = modal.querySelector('.close-btn');
+      const buttons = document.querySelectorAll('.read-more-btn');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const card = button.closest('.news-card');
+          if(!card) return;
+          modalTitle.textContent = card.dataset.title || '';
+          modalImage.src = card.dataset.image || '';
+          modalImage.alt = card.dataset.title || 'News image';
+          modalText.textContent = card.dataset.text || '';
+          modal.style.display = 'block';
+          modal.setAttribute('aria-hidden', 'false');
+          // focus handling
+          closeBtn.focus();
+        });
+      });
+
+      // Close modal
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+      });
+
+      // Close by clicking outside content
+      window.addEventListener('click', e => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // Close on ESC
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+          modal.style.display = 'none';
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      });
+    })();
+    
+    
+    
+    
+    
+    
+    
+     
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const closeBtn = document.getElementById('close-btn');
+  const navLinks = navMenu.querySelectorAll('a');
+
+  // Open menu
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.add('active');
+  });
+
+  // Close menu with × button
+  closeBtn.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
+
+  // Close menu when clicking any nav link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </script>
+ 
+</body>
+</html>

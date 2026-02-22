@@ -1,0 +1,544 @@
+/* ======= GLOBAL STYLE ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #f5c518;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+
+/* ======= HOMEPAGE LINK ======= */
+.home {
+  text-align: center;
+  margin: 20px;
+}
+.home a {
+  color: #f5c518;
+  text-decoration: none;
+  border: 1px solid #f5c518;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.home a:hover {
+  background: #f5c518;
+  color: #000;
+}
+
+/* ======= COURSE LINK ======= */
+.Course {
+  text-align: center;
+}
+.Course button {
+  background: transparent;
+  border: 2px solid #f5c5;
+  color: #f5c518;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.Course button:hover {
+  background: #f5c518;
+  color: #000;
+}
+
+/* ======= NOTE AREA ======= */
+p {
+  margin: 10px 20px;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.kuku {
+  text-align: center;
+  margin: 15px 0;
+}
+.kuku a {
+  color: #000;
+  background: #f5c518;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.kuku a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ======= MAIN SERVICES CONTAINER ======= */
+.services {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.services h1 {
+  text-align: center;
+  color: #f5c518;
+  font-size: 2rem;
+  margin-bottom: 20px;
+    font-weight: 500;
+  padding-bottom: 10px;
+}
+
+/* ======= SERVICE CARD ======= */
+.service-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(245, 197, 24, 0.15);
+  padding: 25px 20px;
+  animation: floatIn 1.2s ease forwards;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: 300;
+  
+  
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(245, 197, 24, 0.3);
+}
+
+.service-card h3 {
+  color: #f5c518;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  
+  font-weight: 300;
+}
+.service-card p {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.service-card strong {
+  color: #fff;
+}
+
+/* ======= BUTTONS ======= */
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.buttons button {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #f5c518;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.ngn {
+  background: #f5c518;
+  color: #000;
+  font-weight: bold;
+}
+button.ngn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.usdt button {
+  background: transparent;
+  color: #f5c518;
+}
+.usdt button:hover {
+  background: #f5c518;
+  color: #000;
+}
+
+/* ======= FLOAT-IN ANIMATION ======= */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======= COURSE SECTION ======= */
+#Course h2 {
+  text-align: center;
+  color: #f5c518;
+  margin-top: 60px;
+}
+ 
+ 
+ 
+ 
+ 
+
+#Course img {
+  border: 2px solid #f5c518;
+}
+
+ 
+
+
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (min-width: 768px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.services-header {
+  background-color: ; /* black background */
+  color: #fff; /* default white text */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services-header .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.services-header .section-subtitle {
+  font-size: 1.2rem;
+  color: #ccc; /* slightly lighter text */
+}
+
+.services-header .gold {
+  color: #d4af37; /* gold color */
+  font-weight: 600;
+}
+
+.float-in {
+  animation: floatIn 1s ease forwards;
+  opacity: 0;
+}
+
+.float-in.delay1 {
+  animation-delay: 0.3s;
+}
+
+@keyframes floatIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+.services-header { position: relative; z-index: 1; }
+
+
+
+
+
+/* Header container for Services & Courses page */
+.services-header container {
+  max-width: 900px;           /* wraps content nicely */
+  margin: 50px auto;           /* center and give vertical spacing */
+  padding: 50px 30px;          /* breathing space */
+  background-color: #111;      /* deep black for contrast */
+  border-radius: 15px;         /* smooth corners */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6); /* bold shadow for depth */
+  text-align: center;          /* center all content */
+}
+
+/* Section title styling */
+.services-header .section-title {
+  font-size: 2rem;           /* large, readable */
+  color:  #f5c518;              /* gold color */
+  margin-bottom: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Subtitle or description under title */
+.services-header .section-subtitle {
+  font-size: 1.2rem;
+  color: #EEE;                 /* soft off-white */
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Buttons inside header */
+.services-header .hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.services-header .btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.gold-btn {
+  background-color:  #f5c518;
+  color: #111;
+}
+
+.gold-btn:hover {
+  background-color:  #f5c518;
+}
+
+.dark-btn {
+  background-color: #222;
+  color:  #f5c518;
+  border: 2px solid :  #f5c518 ;
+}
+ 
+.dark-btn:hover {
+  background-color: #333;
+}
+
+/* Float-in animation */
+.float-in {
+  opacity: 0;
+  animation: floatIn 1s ease forwards;
+}
+
+.float-in.delay1 {
+  animation-delay: 0.3s;
+}
+
+@keyframes floatIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  /* FOOTER */
+.site-footer {
+  background: #0a0a0a;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+
+.footer-inner {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-info h3 { color: var(--gold); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* FLOAT-IN ANIMATION */
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.float-in {
+  animation: floatIn 1s ease-out forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* ======= NAVBAR MENU STYLES ======= */
+.site-header {
+  position: relative;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  font-size: 1.5rem;
+}
+
+/* Hamburger button */
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+  color: gold;
+}
+
+/* Slide-in menu */
+.nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color:black ; 
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+  transition: right 0.3s ease;
+}
+
+.nav a {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  background-color: black;
+}
+
+.nav a:hover {
+  background: gold;
+  color: black;
+}
+
+.nav.active {
+  right: 0;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: gold;
+  
+  
+}
+
+/* Responsive - show hamburger on mobile */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .header-inner .nav {
+    position: fixed;
+    flex-direction: column;
+  }
+}
+
+/* Desktop view - show normal nav */
+@media (min-width: 901px) {
+  .nav {
+    position: static;
+    flex-direction: row;
+    background: black;
+    height: auto;
+    width: auto;
+    padding-top: 0;
+    right: 0;
+    transition: none;
+  }
+
+  .nav a {
+    border: none;
+    color: white;
+    padding: 10px 15px;
+  }
+
+  .close-btn {
+    display: none;
+  }
+}
+
+
+.brand { color: white; font-weight: bold; text-decoration: none; font-size: 1.5rem; }
+.brand-gold { color: gold ; }
+.site-header { position: relative; z-index: 1000; }
